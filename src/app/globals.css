@@ -1,15 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #121212;
   --foreground: #171717;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-sans);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,6 +16,39 @@
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+}
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.bgglass{
+ background:url("/noise.png") no-repeat,linear-gradient(180deg,rgba(255, 255, 255, 0.08) 0%,rgba(217, 217, 217, 0.04) 100% );
+   background-size: cover;
+
+backdrop-filter: blur(5px);
+}
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 2px #FFBE21, 0 0 2px #C26E09;
+  }
+  50% {
+    box-shadow: 0 0 6px #FFBE21, 0 0 6px #C26E09;
+  }
+}
+.animate-marquee{
+  border-top: 1px solid #ffffff2d;
+  border-bottom: 1px solid #ffffff2d;
+ background: url(/public/noise.png) lightgray 0% 0% / 100px 100px repeat, linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(217, 217, 217, 0.04) 100%);
+  box-shadow: 0 4px 20px -1px rgba(0, 0, 0, 0.00); backdrop-filter: blur(25px);
+}
+
+.text-gradiant {
+background: linear-gradient(92deg, #FFBE21 -36.49%, #C26E09 106.28%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* Optional for Firefox */
+  color: transparent;
 }
 
 body {
