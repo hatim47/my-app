@@ -3,18 +3,17 @@ import { motion } from "framer-motion";
 
 export default function Slide3DCarousel() {
   const images = [
-    "/1.jpg",
-    "/2.jpg",
-    "/3.jpg",
-    "/3.png"
+    "/tab/20.png",
+    "/tab/21.png",
+    "/tab/16.png",
+    "/tab/16.png"
    
   ];
 const texts = [
-  "Call OF Duty",
-  "PubG",
   "G-Mouse",
-  "G-Mouse"
-
+  "HeadPhone",
+  "LED-Coved",
+  "G-System"
 ];
   const [index, setIndex] = useState(0);
 

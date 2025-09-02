@@ -18,7 +18,7 @@ export default function Navbar() {
 
         {/* Desktop Navigation */}
         <ul className="hidden md:flex md:gap-2 lg:gap-6">
-          {["Home", "Game", "Products", "About Us", "Support", "FAQs"].map((item, i) => (
+          {["Home", "Game", "Product", "About Us", "Support", "FAQs"].map((item, i) => (
             <li key={i} className="uppercase text-white text-sm hover:text-[#FFBE21] transition">
               <Link href={`/${item.toLowerCase().replace(" ", "")}`}>
                 {item}
@@ -43,7 +43,7 @@ export default function Navbar() {
             {menuOpen && (
         <div className="absolute top-16 w-[90%] mx-auto bg-black/90 backdrop-blur-md rounded-xl p-4 md:hidden">
           <ul className="flex flex-col gap-4">
-            {["Home", "Game", "Products", "About Us", "Support", "FAQs"].map((item, i) => (
+            {["Home", "Game", "Product", "About Us", "Support", "FAQs"].map((item, i) => (
               <li key={i} className="uppercase text-white text-sm hover:text-[#FFBE21] transition">
                 <Link href={`/${item.toLowerCase().replace(" ", "")}`}>
                   {item}
