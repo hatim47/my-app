@@ -27,7 +27,7 @@ export default function Hero() {
 const x = useTransform(scrollYProgress, [0, 1], ["0%", "-50%"]);
   // Auto slide every 9s
   useEffect(() => {
-    const interval = setInterval(() => paginate(1), 40000);
+    const interval = setInterval(() => paginate(1), 8000);
     return () => clearInterval(interval);
   }, [page]);
 
@@ -84,7 +84,7 @@ const x = useTransform(scrollYProgress, [0, 1], ["0%", "-50%"]);
       </AnimatePresence>
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/10" />
+      {/* <div className="absolute inset-0 bg-black/10" /> */}
     <div className="relative z-20 w-full max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-0">
       {/* Foreground */}
       <AnimatePresence initial={false} custom={direction}>
@@ -111,7 +111,7 @@ const x = useTransform(scrollYProgress, [0, 1], ["0%", "-50%"]);
       <div className="inset-0 flex flex-col md:justify-between mb-20 md:mb-0 text-white z-20">
             <div className="w-full max-w-7xl flex items-start flex-col px-5">
               <h1 className="text-3xl lg:text-5xl font-bold font-sans mb-4 uppercase text-start">Let your <br /> mind <span className="text-[#FFBE21]"> explore </span> <br /> new world</h1>
-              <p className=" text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br /> sed do eiusmod tempor incididunt ut labore et dolore <br /> magna aliqua.</p>
+              <p className=" text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br className="hidden md:block" /> sed do eiusmod tempor incididunt ut labore et dolore <br className="hidden md:block"  /> magna aliqua.</p>
               <div className="flex gap-x-6 mt-6">
                 <button className="px-5 py-2 md:px-8 md:py-4 bg-linear-41 from-[#FFBE21] to-[#C26E09] -skew-x-16 font-semibold ">
                   <span className="skew-x-16 block text-xs md:text-base text-white">

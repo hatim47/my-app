@@ -19,7 +19,7 @@ const texts = [
 
   // autoplay
   useEffect(() => {
-    const id = setInterval(() => paginate(1), 90000);
+    const id = setInterval(() => paginate(1), 3000);
     return () => clearInterval(id);
   }, []);
 
