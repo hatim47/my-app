@@ -20,9 +20,9 @@ export default function Navbar() {
     { name: "Home", href: "/" },
     { name: "Games", href: "/game" },
     { name: "Products", href: "/product" },
-    { name: "About Us", href: "/about" },
+    { name: "About Us", href: "/game" },
     { name: "Support", href: "/support" },
-    { name: "FAQs", href: "/faqs" },
+    { name: "FAQs", href: "/product" },
   ].map((link, i) => (
     <li
       key={i}
