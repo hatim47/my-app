@@ -15,16 +15,23 @@ export default function Navbar() {
           <img src="/logo.png" alt="Logo" className="w-26 lg:w-32 md:w-32" />
         </Link>
 
-        {/* Desktop Navigation */}
         <ul className="hidden md:flex md:gap-2 lg:gap-6">
-          {["Home", "Game", "Product", "About Us", "Support", "FAQs"].map((item, i) => (
-            <li key={i} className="uppercase text-white text-sm hover:text-[#FFBE21] transition">
-              <Link href={`/${item.toLowerCase().replace(" ", "")}`}>
-                {item}
-              </Link>
-            </li>
-          ))}
-        </ul>
+  {[
+    { name: "Home", href: "/" },
+    { name: "Games", href: "/game" },
+    { name: "Products", href: "/product" },
+    { name: "About Us", href: "/about" },
+    { name: "Support", href: "/support" },
+    { name: "FAQs", href: "/faqs" },
+  ].map((link, i) => (
+    <li
+      key={i}
+      className="uppercase text-white text-sm hover:text-[#FFBE21] transition"
+    >
+      <Link href={link.href}>{link.name}</Link>
+    </li>
+  ))}
+</ul>
 
         {/* Icons + Mobile Menu Toggle */}
         <div className="flex items-center space-x-3 md:space-x-reverse">
