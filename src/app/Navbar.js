@@ -1,4 +1,3 @@
-            
 "use client";
 import { useState } from "react";
 import Link from "next/link";
@@ -9,7 +8,7 @@ export default function Navbar() {
 
   return (
     <section className="relative flex flex-col items-center justify-center mx-4 md:mx-auto z-90">
-  <div className="fixed top-4 left-1/2 -translate-x-1/2 w-[88%] sm:w-[95%] lg:w-[96.6%] md:max-w-[1330px] bg-black/60 backdrop-blur-md rounded-full shadow-md px-3 md:px-6 py-4 flex items-center justify-between z-99">
+  <div className="fixed top-4 left-1/2 -translate-x-1/2 w-[90%] sm:w-[95%] lg:w-[96.6%] md:max-w-[1330px] bg-black/60 backdrop-blur-md rounded-full shadow-md px-3 md:px-6 py-4 flex items-center justify-between z-99">
      
         {/* Logo */}
         <Link href="/">

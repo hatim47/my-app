@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export default function Slide3DCarousel() {
   const images = [
     "/1.jpg",
-    "/2.jpg",
+    "/Maskgroup(30).png",
     "/3.jpg",
     "/3.png"
    

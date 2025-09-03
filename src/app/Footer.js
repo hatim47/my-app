@@ -2,28 +2,28 @@ import { Icon } from "@iconify/react";
 
 export default function Footer() {
   return (
-    <footer className="relative w-full flex flex-col items-center bg-[url('/Maskgroup22).png')] bg-no-repeat bg-cover text-gray-300 px-5 md:px-5 lg:px-5 pt-20">
+    <footer className="relative w-full flex flex-col items-center bg-[url('/Maskgroup22).png')] bg-no-repeat bg-cover text-white px-5 md:px-5 lg:px-5 pt-20">
       
       {/* Floating Image */}
       <img
         src="/image49.png"
         alt="Decor"
-        className="hidden md:block absolute w-60 md:w-80  md:top-[12%] lg:-top-[39%] xl:top-[-21%]  right-0"
+        className="hidden md:block absolute w-80 xl:w-110 md:bottom-0   xl:bottom-0  right-0"
       />
 
       {/* Top Section */}
-      <div className="w-full xl:max-w-7xl flex flex-col lg:flex-row  gap-10  xl:gap-20">
+      <div className="w-full xl:max-w-7xl flex flex-col lg:flex-row items-center sm:items-start gap-10  xl:gap-20">
         
         {/* Logo + Description */}
-        <div className="lg:flex lg:flex-col ">
+        <div className="flex flex-col items-center sm:items-start">
           <img src="/logo.png" alt="Logo" className="w-40 mb-4" />
-          <p className="text-base max-w-md xl:max-w-sm lg:max-w-2xs">
+          <p className="text-base text-center sm:text-start max-w-sm xl:max-w-sm lg:max-w-2xs">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
         </div>
 
         {/* Links */}
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-2 xl:gap-10 xl:flex-1">
+        <div className=" flex gap-10 lg:gap-15 xl:gap-20 2xl:gap-50 xl:flex-1">
           <div>
             <h4 className="text-sm font-semibold text-white mb-3 uppercase">Company</h4>
             <ul className="space-y-3 text-sm">
@@ -63,7 +63,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom Section */}
-      <div className="w-full max-w-7xl py-10 flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-white border-t border-white/10 mt-10">
+      <div className="w-full max-w-7xl py-10 flex flex-col md:flex-row  items-center gap-6 text-sm text-white  mt-10">
         
         {/* Socials */}
         <div className="flex gap-4">

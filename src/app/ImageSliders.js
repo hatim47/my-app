@@ -3,17 +3,17 @@ import { motion } from "framer-motion";
 
 export default function Slide3DCarousel() {
   const images = [
-    "/tab/20.png",
-    "/tab/21.png",
-    "/tab/16.png",
-    "/tab/16.png"
+    "/Mask group (27).png",
+    "/Mask group (28).png",
+    "/Mask group (29).png",
+    "/Mask group (27).png"
    
   ];
 const texts = [
   "G-Mouse",
   "HeadPhone",
   "LED-Coved",
-  "G-System"
+  "G-Mouse"
 ];
   const [index, setIndex] = useState(0);
 

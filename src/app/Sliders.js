@@ -22,7 +22,7 @@ export default function Sliders () {
 const x = useTransform(scrollYProgress, [0, 1], ["0%", "-50%"]);
   // Auto slide every 9s
   useEffect(() => {
-    const interval = setInterval(() => paginate(1), 8000);
+    const interval = setInterval(() => paginate(1), 40000);
     return () => clearInterval(interval);
   }, [page]);
   const bgVariants = {
@@ -31,12 +31,12 @@ const x = useTransform(scrollYProgress, [0, 1], ["0%", "-50%"]);
     exit: (dir) => ({ x: dir > 0 ? "-100%" : "100%" }),
   };
   const fgVariants = {
-    enter: (dir) => ({ x: dir > 0 ? "300%" : "-400%", opacity: 1 }),
+    enter: (dir) => ({ x: dir > 0 ? "-300%" : "400%", opacity: 1 }),
     center: { x: 0, opacity: 1 },
     exit: (dir) => ({ x: dir > 0 ? "300%" : "-400%", opacity: 1 }),
   };
   const transitionConfig = {
-    duration: 1.5,
+    duration: 1.0,
     delay: 2.5,
     ease: [1, 0, 0.01, 1],
   };
@@ -67,12 +67,12 @@ const x = useTransform(scrollYProgress, [0, 1], ["0%", "-50%"]);
 
       {/* Overlay */}
       {/* <div className="absolute inset-0 bg-black/10" /> */}
-    <div className="relative z-20 w-full max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-0">
+    <div className="relative z-20 w-full max-w-7xl mx-auto flex flex-col-reverse md:flex-row  px-5 xl:px-0">
       {/* Foreground */}
       <AnimatePresence initial={false} custom={direction}>
         <motion.div
-          key={`fg-${page}`}
-          className="absolute  top-2/2 left-1/2 w-full h-[100vh] -translate-x-[70%] md:-translate-x-1/2 -translate-y-[40%] md:-translate-y-1/2"
+          key={`fg-${page}`}   
+          className="absolute w-8/12  h-[50vh] bottom-0  md:w-8/12 lg:w-full md:h-[70vh]  lg:h-[80vh]  translate-y-50 translate-x-13 sm:translate-y-10  md:translate-x-80 xl:translate-x-100"
           custom={direction}
           variants={fgVariants}
           initial="enter"
@@ -90,19 +90,19 @@ const x = useTransform(scrollYProgress, [0, 1], ["0%", "-50%"]);
       </AnimatePresence>
 
       {/* Static Text/Button */}
-      <div className="inset-0 flex flex-col md:justify-between mb-20 md:mb-0 text-white z-20">
-            <div className="w-full max-w-7xl flex items-start flex-col px-5">
+      <div className="inset-0 flex flex-col md:justify-between sm:mt-0 mb-40 md:mb-0 text-white z-20">
+            <div className="w-full max-w-7xl flex items-start flex-col ">
               <h1 className="text-3xl lg:text-5xl font-bold font-sans mb-4 uppercase text-start">Let your <br /> mind <span className="text-[#FFBE21]"> explore </span> <br /> new world</h1>
               <p className=" text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br className="hidden md:block" /> sed do eiusmod tempor incididunt ut labore et dolore <br className="hidden md:block"  /> magna aliqua.</p>
-              <div className="flex gap-x-6 mt-6">
-                <button className="px-5 py-2 md:px-8 md:py-4 bg-linear-41 from-[#FFBE21] to-[#C26E09] -skew-x-16 font-semibold ">
-                  <span className="skew-x-16 block text-xs md:text-base text-white">
+              <div className="flex gap-x-6 mt-6 ps-3">
+                <button className="px-5 py-2 lg:px-8 lg:py-4 bg-linear-41 from-[#FFBE21] to-[#C26E09] -skew-x-16 font-semibold ">
+                  <span className="skew-x-16 block text-xs lg:text-base text-white">
                     DOWNLOAD
                   </span>
 
                 </button>
-                <button className="px-5 py-2 md:px-8 md:py-4  border-1 border-[#C26E09] text-gradiant -skew-x-16 font-semibold transition-all duration-300 hover:bg-[#FFF3E0]/10 hover:shadow-[3px_3px_0px_#FFBE21] shadow-none hover:translate-x-[-3px] hover:translate-y-[-3px]">
-                  <span className="skew-x-16 block text-xs md:text-base text-gradiant ">
+                <button className="px-5 py-2 lg:px-8 lg:py-4  border-1 border-[#C26E09] text-gradiant -skew-x-16 font-semibold transition-all duration-300 hover:bg-[#FFF3E0]/10 hover:shadow-[3px_3px_0px_#FFBE21] shadow-none hover:translate-x-[-3px] hover:translate-y-[-3px]">
+                  <span className="skew-x-16 block text-xs lg:text-base text-gradiant ">
                     LEARN MORE
                   </span>
                 </button>

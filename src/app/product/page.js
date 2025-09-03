@@ -75,7 +75,7 @@ export default function Product() {
                     </div>
               </div>
                 <img
-                    src="/Group-1000001781.png"
+                    src="/Group-1000001784.png"
                     alt={`Foreground ${slideIndex}`}
                     className="w-113 lg:w-150 mask-b-from-90% mask-b-to-100%"
                   />
