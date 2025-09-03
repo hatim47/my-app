@@ -112,13 +112,13 @@ export default function Product() {
     </div>
     
     </section>
-   <section className="relative w-full  flex flex-col items-center justify-center z-2 py-20 md:py-40 px-5">
+  <section className="relative w-full  flex flex-col items-center justify-center z-2 py-20 md:py-40 px-5">
        <div className="absolute w-70 h-100 bg-[#FFBE21] rounded-l-full blur-[200px] left-0"/>
         <div className="bgglass bg-cover rounded-2xl w-full max-w-7xl relative flex flex-col items-center justify-center my-10 py-16 lg:py-16 xl:py-26">
- <div className="max-w-7xl grid grid-cols-1 gap-y-20 sm:grid-cols-2 sm:gap-y-40  lg:grid-cols-4 gap-6 lg:px-15 xl:px-20">
+ <div className="max-w-7xl grid grid-cols-1 gap-y-16 sm:grid-cols-2 sm:gap-y-40  lg:grid-cols-4 gap-6 lg:px-15 xl:px-20">
   <div className="flex flex-col items-center  gap-4 p-4">
-<div className="w-fit p-5 bg-black shadow-[#FFBE21]/22 shadow shadow-[0px_0px_20px_10px] rounded-full flex justify-center mx-auto">
-  <img src="../Maskgroup-(24).png" alt="" />
+<div className="w-fit p-5 bg-black shadow-[#FFBE21]/22  shadow-[0px_0px_20px_10px] rounded-full flex justify-center mx-auto">
+  <img src="../Maskgroup-(24).png" alt="" className="w-10 md:w-20" />
 </div>
 <h4 className="text-base md:text-2xl font-bold uppercase text-white mt-3 text-center" >Free Shipping</h4>
 <p className="text-sm md:text-base text-center max-w-2xs text-white"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor .</p>
@@ -127,8 +127,8 @@ export default function Product() {
 
 
     <div className="flex flex-col items-center  gap-4 p-4">
-<div className="w-fit p-5 bg-black shadow-[#FFBE21]/22 shadow shadow-[0px_0px_20px_10px] rounded-full flex justify-center mx-auto">
-  <img src="../Maskgroup-(25).png" alt="" />
+<div className="w-fit p-5 bg-black shadow-[#FFBE21]/22  shadow-[0px_0px_20px_10px] rounded-full flex justify-center mx-auto">
+  <img src="../Maskgroup-(25).png" alt="" className="w-10 md:w-20" />
 </div>
 <h4 className="text-base md:text-2xl font-bold uppercase text-white mt-3 text-center" >Return Policy</h4>
 <p className="text-sm md:text-base text-center max-w-2xs text-white"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor .</p>
@@ -137,8 +137,8 @@ export default function Product() {
 
 
     <div className="flex flex-col items-center  gap-4 p-4">
-<div className="w-fit p-5 bg-black shadow-[#FFBE21]/22 shadow shadow-[0px_0px_20px_10px] rounded-full flex justify-center mx-auto">
-  <img src="../Maskgroup-(26).png" alt="" />
+<div className="w-fit p-5 bg-black shadow-[#FFBE21]/22  shadow-[0px_0px_20px_10px] rounded-full flex justify-center mx-auto">
+  <img src="../Maskgroup-(26).png" alt="" className="w-10 md:w-20" />
 </div>
 <h4 className="text-base md:text-2xl font-bold uppercase text-white mt-3 text-center" >Save Money</h4>
 <p className="text-sm md:text-base text-center max-w-2xs text-white"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor .</p>
@@ -146,8 +146,8 @@ export default function Product() {
 
 
     <div className="flex flex-col items-center  gap-4 p-4">
-<div className="w-fit p-5 bg-black shadow-[#FFBE21]/22 shadow shadow-[0px_0px_20px_10px] rounded-full flex justify-center mx-auto">
-  <img src="../Maskgroup-(27).png" alt="" />
+<div className="w-fit p-5 bg-black shadow-[#FFBE21]/22  shadow-[0px_0px_20px_10px] rounded-full flex justify-center mx-auto">
+  <img src="../Maskgroup-(27).png" alt="" className="w-10 md:w-20" />
 </div>
 <h4 className="text-base md:text-2xl font-bold uppercase text-white mt-3 text-center" >Support 24/7</h4>
 <p className="text-sm md:text-base text-center max-w-2xs text-white"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor .</p>
