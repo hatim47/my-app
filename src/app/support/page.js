@@ -7,7 +7,7 @@ import Cards from "../Cart2";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
 import TestimonialCard from "../TestimonialSlider";
-export default function Product() {
+export default function Support() {
       const [[page, direction], setPage] = useState([0, 0]);
       const slideIndex = wrap(0, SLIDES.length, page);
     
@@ -49,69 +49,200 @@ export default function Product() {
              { title: "Minecraft", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor .", img: "/tab/11.png" },
          
   ];
+ const [quantity, setQuantity] = useState(1);
 
+  const increment = () => setQuantity((prev) => prev + 1);
+  const decrement = () =>
+    setQuantity((prev) => (prev > 1 ? prev - 1 : 1)); // don’t go below 1
+
+  const pricePerItem = 300;
+  const totalPrice = pricePerItem * quantity;
 
  return (
     <>
         <Navbar/>                                                            
-        <section className=" relative w-full h-[80vh] md:h-[60vh] lg:h-[80vh] bg-[url('/Maskgroup-(29).png')] bg-cover bg-center mask-alpha mask-b-from-[#171717] mask-b-from-90% md:mask-b-from-70% mask-b-to-transparent  flex md:items-center justify-center z-0">
+        <section className="relative w-full h-[80vh] md:h-[60vh] lg:h-[80vh] bg-[url('/Maskgroup-(28).png')] bg-cover bg-center mask-alpha mask-b-from-[#171717] mask-b-from-90% md:mask-b-from-70% mask-b-to-transparent  flex md:items-center justify-center z-0">
               <div className="absolute inset-0 bg-black/30" />
             <div className="relative z-20 w-full max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between px-6 xl:px-0">
-        
               {/* Static Text/Button */}
               <div className="inset-0 flex flex-col md:justify-between md:mt-20 mt-30 text-white z-20">
                     <div className="w-full max-w-7xl flex items-start flex-col px-5 md:px-0 ">
-                      <h1 className="text-3xl/8 lg:text-5xl/13 font-bold font-sans mb-4 uppercase text-start ">Redefine your<br /><span className="text-[#FFBE21]">gaming experience</span> <br />with gare</h1>
+                      <h1 className="text-3xl/8 lg:text-5xl/13 font-bold font-sans mb-4 uppercase text-start ">Lock In Your Power<br /> Ups<span className="text-[#FFBE21]">Checkout Like<br /> a Pro</span>!</h1>
  <p className="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br /> sed do eiusmod tempor incididunt ut labore et dolore <br /> magna aliqua.</p>
-                      <div className="flex gap-x-6 mt-6">
-                        <button className="px-5 py-2 md:px-8 md:py-4 bg-linear-41 from-[#FFBE21] to-[#C26E09] -skew-x-16 font-semibold ">
-                          <span className="skew-x-16 block text-xs md:text-base text-white uppercase">
-                            Explore Games
-                          </span>
-        
-                        </button>
-                      
-                      </div>
                     </div>
               </div>
                 <img
-                    src="/Group-1000001781.png"
+                    src="/Group 1000001782.png"
                     alt={`Foreground ${slideIndex}`}
                     className="w-113 lg:w-150 mask-b-from-90% mask-b-to-100%"
                   />
-              </div>
-           
+              </div>           
             </section>
 
 
-  <section className="relative w-full flex flex-col items-center justify-center  z-2 ">  
-      
-<div className="absolute w-50 h-50 md:w-100 md:h-100 bg-[#FFBE21] rounded-full blur-[200px] right-0"/>
-       <div className="relative z-20 w-full max-w-7xl mx-auto flex flex-col pt-60">
-        <div className="flex flex-col items-center text-white">
-          <h1 className="text-3xl lg:text-5xl font-bold font-sans text-center mb-4 tracking-wider uppercase max-w-2xl">Shop By <span className="text-[#FFBE21]">Categories</span> </h1>
+   <section className="relative w-full  flex  justify-center z-2 py-20 md:py-40 px-5">
+     <div className="absolute w-50 h-100 bg-[#FFBE21] rounded-l-full blur-[200px] right-0 "/>
+
+<div class="w-full text-white max-w-7xl flex  flex-col ">
+<div class="flex  justify-between items-center  mb-10">
+  <h1 class="text-4xl font-extrabold ">
+    SHOPPING <span class="text-yellow-500">CART</span>
+  </h1>
+
+
+  <p class="text-sm text-white ">
+    100% Guarantee: Free US Ground Shipping and 30 Days Free Return.
+  </p>
+</div>
+  
+  <div class="space-y-6">
+
+   <div class="flex justify-between items-center gap-4 bgglass border border-gray-700 rounded-xl p-4 shadow-md">
+  
+     
+      <div class="flex gap-6">
+        <img src="/tab/20.png" alt="Product" class="w-28 h-28 rounded-md object-cover"/>
+      <div class="flex flex-col">
+        <span class="px-3 py-1 border border-[#FFBE21] bg-[#FFBE21]/13 text-xs rounded-full">Gaming Mouse</span>
+       <div>
+        <h2 class="mt-2 font-bold text-lg m-0">MAD CATZ R.A.T.1</h2>
+        <p class="text-xs text-white">Standard Edition</p>
+       </div>
+       
+
+     
+        <div class="flex items-center gap-2 mt-2">
+          <span class="text-sm text-white">Color:</span>
+          <button class="w-4 h-4 rounded-full bg-blue-600"></button>
+          <button class="px-2 py-1 border border-[#FFBE21] bg-[#FFBE21]/13  text-xs rounded-md hover:bg-[#FFBE21] hover:text-black">Edit</button>
+        </div>
+      </div>
+      </div>
+
+    <div className="flex items-center gap-20">
+      <div className="flex items-center gap-6">
+        <div className="flex items-center gap-2">
+          <span>Quantity</span>
+
+          {/* Decrease button */}
+          <button
+            onClick={decrement}
+            className="w-8 h-6 rounded-full border border-white flex items-center justify-center text-[#FFBE21] text-sm"
+          >
+            --
+          </button>
+
+          {/* Quantity display */}
+          <span className="py-0 px-2 bg-[#FFBE21]/13 text-[#FFBE21] rounded-full text-sm">
+            {quantity}
+          </span>
+
+          {/* Increase button */}
+          <button
+            onClick={increment}
+            className="w-8 h-6 rounded-full bg-gradient-to-r from-[#FFBE21] to-[#C26E09] flex items-center justify-center text-sm"
+          >
+            +
+          </button>
         </div>
       </div>
 
+      {/* Price updates dynamically */}
+      <span className="font-bold">${totalPrice}</span>
 
-      <div className="flex flex-col items-center w-full pb-10 pt-20 md:pt-10 overflow-hidden">
-   <ImageSlider />
-      
-      <div className="flex gap-x-6 mt-6">
-        <button className="px-5 py-2 md:px-8 md:py-4 text-base bg-linear-41 from-[#FFBE21] to-[#C26E09] -skew-x-16 font-semibold ">
-         <span className="skew-x-16 block text-xs md:text-base text-white ">
-  DOWNLOAD
-  </span>
-        </button>
-         <button className="px-5 py-2 md:px-8 md:py-4 text-base border-1 border-[#C26E09] text-gradiant -skew-x-16 font-semibold transition-all duration-300 hover:bg-[#FFF3E0]/10 hover:shadow-[3px_3px_0px_#FFBE21] shadow-none hover:translate-x-[-3px] hover:translate-y-[-3px]">
-        <span className="skew-x-16 block text-xs md:text-base text-gradiant ">
-    LEARN MORE
-  </span>
-        </button>
-         </div>
+      {/* Remove button */}
+      <button className="px-4 py-2 border border-[#FFBE21] bg-[#FFBE21]/13 rounded-lg hover:bg-[#FFBE21] hover:text-black">
+        Remove
+      </button>
     </div>
-    
-    </section>
+    </div>
+     <div class="flex justify-between items-center gap-4 bgglass border border-gray-700 rounded-xl p-4 shadow-md">
+  
+     
+      <div class="flex gap-6">
+        <img src="/tab/20.png" alt="Product" class="w-28 h-28 rounded-md object-cover"/>
+      <div class="flex flex-col">
+        <span class="px-3 py-1 border border-[#FFBE21] bg-[#FFBE21]/13 text-xs rounded-full">Headphone</span>
+       <div>
+        <h2 class="mt-2 font-bold text-lg m-0">Steelseries Siberia 200 Green</h2>
+        <p class="text-xs text-white">Standard Edition</p>
+       </div>
+       
+
+     
+        <div class="flex items-center gap-2 mt-2">
+          <span class="text-sm text-white">Color:</span>
+          <button class="w-4 h-4 rounded-full bg-green-600"></button>
+          <button class="px-2 py-1 border border-[#FFBE21] bg-[#FFBE21]/13  text-xs rounded-md hover:bg-[#FFBE21] hover:text-black">Edit</button>
+        </div>
+      </div>
+      </div>
+
+    <div className="flex items-center gap-20">
+      <div className="flex items-center gap-6">
+        <div className="flex items-center gap-2">
+          <span>Quantity</span>
+
+          {/* Decrease button */}
+          <button
+            onClick={decrement}
+            className="w-8 h-6 rounded-full border border-white flex items-center justify-center text-[#FFBE21] text-sm"
+          >
+            --
+          </button>
+
+          {/* Quantity display */}
+          <span className="py-0 px-2 bg-[#FFBE21]/13 text-[#FFBE21] rounded-full text-sm">
+            {quantity}
+          </span>
+
+          {/* Increase button */}
+          <button
+            onClick={increment}
+            className="w-8 h-6 rounded-full bg-gradient-to-r from-[#FFBE21] to-[#C26E09] flex items-center justify-center text-sm"
+          >
+            +
+          </button>
+        </div>
+      </div>
+
+      {/* Price updates dynamically */}
+      <span className="font-bold">${totalPrice}</span>
+
+      {/* Remove button */}
+      <button className="px-4 py-2 border border-[#FFBE21] bg-[#FFBE21]/13 rounded-lg hover:bg-[#FFBE21] hover:text-black">
+        Remove
+      </button>
+    </div>
+    </div>
+  </div>
+
+ 
+  <div class="mt-10">
+    <p class="mb-2">Have a Promo Code?</p>
+    <div class="flex gap-3">
+      <input type="text" placeholder="Promo code" class="px-4 py-2 rounded-full text-black focus:outline-none flex-1"/>
+      <button class="px-6 py-2 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold">Apply</button>
+    </div>
+  </div>
+
+
+  <div class="mt-8 text-right space-y-2">
+    <p>2 Item(s) Subtotal <span class="ml-4">$500</span></p>
+    <p>Shipping and Handling <span class="ml-4">N/A</span></p>
+    <p class="font-bold">Order Total <span class="ml-4">$500</span></p>
+  </div>
+
+
+  <div class="mt-6 flex justify-end">
+    <button class="px-8 py-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold rounded-md shadow-md">
+      SECURE CHECKOUT
+    </button>
+  </div>
+</div>
+
+ </section>
+
    <section className="relative w-full  flex flex-col items-center justify-center z-2 py-20 md:py-40 px-5">
        <div className="absolute w-70 h-100 bg-[#FFBE21] rounded-l-full blur-[200px] left-0"/>
         <div className="bgglass bg-cover rounded-2xl w-full max-w-7xl relative flex flex-col items-center justify-center my-10 py-16 lg:py-16 xl:py-26">
@@ -185,7 +316,7 @@ export default function Product() {
   
     <div className="absolute  md:w-50 md:h-100 lg:w-50 lg:h-100 bg-[#FFBE21] rounded-l-full blur-[200px] right-50% md:bottom-60 lg:bottom-95 "/>
         <div className="bg-[url('/Maskgroup23).png')] bg-cover rounded-2xl w-full max-w-7xl relative flex flex-col items-center justify-center my-10 lg:mt-30 lg:mb-50 xl:my-40 py-16 md:py-26 lg:py-46">
-     <h1 className="text-xl sm:text-3xl lg:text-5xl font-bold font-sans mb-4 text-white uppercase">Salford Newsletter</h1>
+     <h1 className="text-xl  sm:text-3xl lg:text-5xl font-bold font-sans mb-4 text-white uppercase">Salford Newsletter</h1>
    <div className="w-full sm:max-w-xl lg:max-w-3xl relative flex justify-center px-5"> 
     
       <input type="text" name="price" placeholder="Enter Email" className="block w-full bg-white/20 max-w-3xl py-2 sm:py-4 pr-3 relative pl-3 text-xs md:text-base outline-[#FFBE21] outline-1 text-white/53 placeholder:text-white/53 active:outline-none focus:outline-[#FFBE21]  sm:text-sm/6" />
