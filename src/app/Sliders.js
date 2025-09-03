@@ -22,7 +22,7 @@ export default function Sliders () {
 const x = useTransform(scrollYProgress, [0, 1], ["0%", "-50%"]);
   // Auto slide every 9s
   useEffect(() => {
-    const interval = setInterval(() => paginate(1), 40000);
+    const interval = setInterval(() => paginate(1), 4000);
     return () => clearInterval(interval);
   }, [page]);
   const bgVariants = {
@@ -67,12 +67,12 @@ const x = useTransform(scrollYProgress, [0, 1], ["0%", "-50%"]);
 
       {/* Overlay */}
       {/* <div className="absolute inset-0 bg-black/10" /> */}
-    <div className="relative z-20 w-full max-w-7xl mx-auto flex flex-col-reverse md:flex-row  px-5 xl:px-0">
+    <div className="relative z-20 w-full max-w-7xl mx-auto flex flex-col-reverse items-center md:flex-row  px-5 xl:px-0">
       {/* Foreground */}
       <AnimatePresence initial={false} custom={direction}>
         <motion.div
           key={`fg-${page}`}   
-          className="absolute w-8/12  h-[50vh] bottom-0  md:w-8/12 lg:w-full md:h-[70vh]  lg:h-[80vh]  translate-y-50 translate-x-13 sm:translate-y-10  md:translate-x-80 xl:translate-x-100"
+          className="absolute w-8/12  h-[50vh]   md:w-8/12 lg:w-full md:h-[70vh]  lg:h-[80vh]  translate-y-50 sm:translate-y-10  md:translate-x-80 xl:translate-x-100"
           custom={direction}
           variants={fgVariants}
           initial="enter"
