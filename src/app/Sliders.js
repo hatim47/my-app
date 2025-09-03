@@ -115,7 +115,7 @@ const x = useTransform(scrollYProgress, [0, 1], ["0%", "-50%"]);
     <div className="relative z-80 ">
    <div className="absolute -rotate-1 w-[99.9%]  py-6 -mt-8 animate-marquee z-3 overflow-hidden px-1">
       <motion.ul
-        className="flex whitespace-nowrap gap-8 will-change-transform animate-marquee"
+        className="flex whitespace-nowrap gap-8 will-change-transform animate-marquee w-fit"
         style={{ x }} // movement linked to scroll
       >
         {[...items, ...items].map((item, i) => (

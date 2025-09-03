@@ -74,7 +74,7 @@ export default function Hero() {
       
     </div>
 <div className="relative md:w-1/2 flex justify-center md:justify-start z-30">
-   <img src="/image50.png" alt="slide" className="w-100 absolute md:-bottom-60 md:-left-10" />
+   <img src="/image50.png" alt="slide" className="w-100 absolute -bottom-57 max-[912px]:-bottom-52 max-[854px]:-bottom-55 lg:-bottom-60 md:-left-10" />
     </div>
     {/* Image */}
     
